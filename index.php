@@ -12,9 +12,15 @@ and open the template in the editor.
             td {
                 background-color: lightskyblue;
                 width: 50px;
-                height: 50px;
+                height: 50px;   
             }
-        </style>
+            </style>
+        <script>
+        function fire(){
+            alert('fire');
+            consol.log();
+        }
+        </script>    
         
     </head>
     <body>
@@ -23,7 +29,7 @@ and open the template in the editor.
                 for($x=1;$x<3;$x++){
                     echo "<tr>";
                     for($y=1;$y<3;$y++){
-                        echo "<td>x</td>";
+                        echo "<td onclick=fire()>x</td>";
                     }
                     "</tr>";
                 }
