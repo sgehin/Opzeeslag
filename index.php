@@ -19,12 +19,22 @@ and open the template in the editor.
             
         <script>
             var ship = ["22", "23", "24"];
+            var boot = ["47","57","67","77","87"];
+            var vlot = ["93","95"];
             function fire(q){
-                if(q==ship[0] || q ==ship[1] || q ==ship[2] ){
+                if(q==ship[0] || q==ship[1] || q==ship[2] ){
                     document.getElementById("myPos"+q).style.backgroundColor = 'red';                    
                     if(checkIfShipSunk(ship)){
-                        alert("Ship has sunk");
-                    }
+                        alert("Ship has sunk");}
+                   }else if(q==boot[0] || q==boot[1] || q==boot[2] || q==boot[3] || q==boot[4] ){
+                            document.getElementById("myPos"+q).style.backgroundColor = 'red';                    
+                            if(checkIfShipSunk(boot)){
+                            alert("Ship has sunk");}
+                            }else if(q==vlot[0] || q==vlot[1] ){
+                                     document.getElementById("myPos"+q).style.backgroundColor = 'red';                    
+                                     if(checkIfShipSunk(vlot)){
+                                     alert("Ship has sunk");}
+                    
                 }else{
                     document.getElementById("myPos"+q).style.backgroundColor = 'blue';                    
                    
@@ -33,7 +43,7 @@ and open the template in the editor.
             function checkIfShipSunk(shipvar){
                for(xvar = 0; xvar < shipvar.length; xvar++ ){
                    var dekleur = document.getElementById('myPos'+shipvar[xvar]).style.backgroundColor;
-                   alert('myPos'+shipvar[xvar]);
+                   alert('myPos'+shipvar[xvar]);//waarom blijft alert 22 aangeven ?   alert('myPos'+shipvar[xvar]);
                     if(dekleur != 'red'){
                        return false;
                    }
@@ -49,7 +59,7 @@ and open the template in the editor.
                 for($x=1;$x<10;$x++){
                     echo "<tr>";
                     for($y=1;$y<10;$y++){
-                        echo "<td  id=myPos$x$y onclick=fire($x$y)>x</td>";
+                        echo "<td  id=myPos$x$y onclick=fire($x$y)></td>";
                     }
                     "</tr>";
                 }
