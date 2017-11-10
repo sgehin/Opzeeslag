@@ -16,10 +16,10 @@ and open the template in the editor.
             }
             </style>
         <script>
-        function fire(){
-            alert('fire');
-            consol.log();
-        }
+                function fire(){
+                 alert('fire');
+                 document.getElementById("myTD").style.backgroundColor = "red";
+                }
         </script>    
         
     </head>
@@ -29,7 +29,7 @@ and open the template in the editor.
                 for($x=1;$x<3;$x++){
                     echo "<tr>";
                     for($y=1;$y<3;$y++){
-                        echo "<td onclick=fire()>x</td>";
+                        echo "<td  id=myTD onclick=fire()>x</td>";
                     }
                     "</tr>";
                 }
