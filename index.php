@@ -7,7 +7,15 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Battleship</title>
+        <style>
+            td {
+                background-color: lightskyblue;
+                width: 50px;
+                height: 50px;
+            }
+        </style>
+        
     </head>
     <body>
         <table>
