@@ -16,9 +16,9 @@ and open the template in the editor.
             }
             </style>
         <script>
-                function fire(){
-                 alert('fire');
-                 document.getElementById("myTD").style.backgroundColor = "red";
+                function fire(q){
+                 alert('q');
+                 document.getElementById("myPos"+q).style.backgroundColor = "red";
                 }
         </script>    
         
@@ -29,7 +29,7 @@ and open the template in the editor.
                 for($x=1;$x<3;$x++){
                     echo "<tr>";
                     for($y=1;$y<3;$y++){
-                        echo "<td  id=myTD onclick=fire()>x</td>";
+                        echo "<td  id=myPos$x$y onclick=fire($x$y)>x</td>";
                     }
                     "</tr>";
                 }
